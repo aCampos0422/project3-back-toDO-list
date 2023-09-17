@@ -26,7 +26,7 @@ const createTaskByUser = async (req, res) => {
 
     await tasks.addUser(user);
 
-    res.status(201).end();
+    res.status(201).json(user);
   }catch(error) {
     res.status(400).json(error)
   }
